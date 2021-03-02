@@ -13,3 +13,87 @@ var connection = mysql.createConnection({
     database: "employeeTracker_db"
 });
 
+//initiat connection with mysql
+connection.connect(function(err) {
+    if (err) throw err;
+    displayLogo();
+    promptUser();
+});
+
+//Display Logo
+function displayLogo(){
+    const logoText = logo(
+        {
+            name: "Employee Tracker",
+            lineChars: 20,
+            padding: 2,
+            margin: 2,
+            borderColor: 'blue',
+            logoColor: 'bold-green',
+        }
+    ).render();
+console.log(logoText);
+}
+
+//Prompting the User
+function promptUser(){
+    inquirer.prompt({
+        type: "list",
+        name: "action",
+        message: "what would you like to do?",
+        choices: [
+            "View All Employees",
+            "View All Departments",
+            "View All Roles",
+            "Add an Employee",
+            "Add a Role",
+            "Update an Employee's Role",
+            "Remove an Employee",
+            "Exit Application"
+        ]
+    })
+    .then((answer) => {
+        switch(answer.action) {
+  
+          case "View All Employees":
+          viewAllEmployees();
+          break;
+  
+          case "View All Departments":
+          viewAllDepts();
+          break;
+  
+          case "View All Roles":
+          viewAllRoles();
+          break;
+  
+          case "Add an Employee":
+          addEmployee();
+          break;
+  
+          case "Add a Department":
+          addDepartment();
+          break;
+  
+          case "Add a Role":
+          addRole();
+          break;
+  
+          case "Update an Employee's Role":
+          updateRole();
+          break;
+  
+          case "Remove an Employee":
+          removeEmployee();
+          break;
+  
+          case "Exit Application":
+          connection.end();
+          console.log("Thank you. You are now exiting the application.");
+          process.exit();
+          break;
+        }
+      });
+    }
+  
+
