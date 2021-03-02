@@ -1,32 +1,31 @@
 {
-    "name": "mysql-employee-tracker",
-    "version": "1.0.0",
-    "description": "A command-line application for managing a company's employees using Node, Inquirer, and MySQL.",
-    "main": "app.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Alex-Tatum/EmployeeTracker"
-    },
-    "keywords": [
-      "node.js",
-      "npm",
-      "MySQL",
-      "database"
-    ],
-    "author": "Alex Tatum",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/Alex-Tatum/EmployeeTracker/issues"
-    },
-    "homepage": "https://github.com/Alex-Tatum/EmployeeTracker/blob/main/README.md",
-    "dependencies": {
-      "asciiart-logo": "^0.2.6",
-      "console.table": "^0.10.0",
-      "inquirer": "^7.3.3",
-      "mysql": "^2.18.1"
-    }
+  "name": "mysql-employee-tracker",
+  "version": "1.0.0",
+  "description": "A command-line application for managing a company's employees using Node, Inquirer, and MySQL.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Tatum/EmployeeTracker"
+  },
+  "keywords": [
+    "node.js",
+    "npm",
+    "MySQL",
+    "database"
+  ],
+  "author": "Alex Tatum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-Tatum/EmployeeTracker/issues"
+  },
+  "homepage": "https://github.com/Alex-Tatum/EmployeeTracker/blob/main/README.md",
+  "dependencies": {
+    "asciiart-logo": "^0.2.6",
+    "console.table": "^0.10.0",
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1"
   }
-  
+}
